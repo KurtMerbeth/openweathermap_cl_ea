@@ -20,16 +20,19 @@ const customParams = {
 const createRequest = (input, callback) => {
   // The Validator helps you validate the Chainlink request data
   const validator = new Validator(callback, input, customParams)
+  console.log(validator)
   const jobRunID = validator.validated.id
   const endpoint = validator.validated.data.endpoint || 'weather'
   const url = `https://api.openweathermap.org/data/2.5/${endpoint}`
   const q = validator.validated.data.city.toUpperCase()
   const appid = process.env.API_KEY;
+  const units = process.env.UNITS
   console.log(appid);
 
   const params = {
     q,
-    appid
+    appid,
+    units
   }
 
   const config = {

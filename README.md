@@ -115,6 +115,8 @@ zip -r external-adapter.zip .
 - Add the environment variable (repeat for all environment variables):
   - Key: API_KEY
   - Value: Your_API_key
+  - Key: UNITS (optional)
+  - Value: metric
 - Save
 
 #### To Set Up an API Gateway (HTTP API)
@@ -158,3 +160,5 @@ If using a REST API Gateway, you will need to disable the Lambda proxy integrati
 - Click More, Add variable (repeat for all environment variables)
   - NAME: API_KEY
   - VALUE: Your_API_key
+  - NAME: UNITS (optional)
+  - VALUE: metric
