@@ -26,7 +26,7 @@ const createRequest = (input, callback) => {
   const url = `https://api.openweathermap.org/data/2.5/${endpoint}`
   const q = validator.validated.data.city.toUpperCase()
   const appid = process.env.API_KEY;
-  const units = process.env.UNITS
+  const units = process.env.UNITS || '':
   console.log(appid);
 
   const params = {
